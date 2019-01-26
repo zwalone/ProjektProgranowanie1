@@ -1,0 +1,32 @@
+											Opis funkcjonalności i zasad działania gry RUN.
+
+	Opis Programu:
+
+Gra jest przeznaczona dla jednego gracza który steruję postacią za pomocą klawiszy A (porusznie w lewo) oraz B(poruszanie w prawo).
+Zadaniem gracza jest jak najdłużej unikać przeciwników, którzy przesuwają się od góry.
+W momęncie kolizji postaci z przeciwnikami gra zatrzyma się na chwilę aby gracz mógł zobaczyć jaki wynik uzyskał, po czym gracz znajdzie sie w menu programu.
+W opcjach możemy zmienić wygląd postacji jak i przeciwników.
+
+	Część Progrmaistyczna:
+	
+Gra tworzy tablice dwuwymiarową, w której zawarta jest postać w dolnej części tablicy. Program tworzy losowo przeciwników w jej górnej części, którzy przesuwają się w dół.
+
+	 Funkcje:
+
+Setup(); - Wywołanie na początku programu aby aby nadać zmiennym odpowiednią wartość.
+Logic(); - Poruszanie postacią wraz z aktualizają jej na mapie . 
+Update(); - Opowiedzialny za przesuwanie przeciwników oraz wyświetlanie ich na mapie.
+LosujPrzeciwnika(); - Pseudolosowe rozmieszczenie przeciwników w tablicy, ilość przeciwników zależna od zmiennej LEVEL.
+Endgame(); - Sprawdza czy znak gracza nie zmienił się w znak przeciwnika, jeśli tak to kończy gre i czyści tablice . 
+Mapa(); - Wyrysowuje obramówki gry.
+Menu(); - Wyrysowuje menu gry oraz obsługuję ję za pomocą switch'a.
+Options(); - Wyrysowuje opcje oraz obsługuję je za pomocą switch'a.
+gotoxy(); - Zmienia położenie kursora w konsoli.
+HideCursor(); - Ukrywa Kursor .
+
+
+	Ciekawe rozwiązania:
+
+-Program można w łatwy sposób modyfikować (Znaki gracza oraz przeciwników, miejsce strtowe postaci, level startowy) poprzez funkkcje Setup() , gdzie wszystkie wartości zmiennych są deklarowane.
+-Gra kończy się poprzez podmianę znaków gracza na przeciwnika. 
+
